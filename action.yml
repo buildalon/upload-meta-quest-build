@@ -34,7 +34,6 @@ inputs:
   inheritAssetFiles:
     description: 'Specifies whether to inherit asset files from the previous build. Defaults to false.'
     required: false
-    default: 'false'
   releaseChannel:
     description: 'Specifies the release channel for uploading the build. Use store for the "Production (AppLab)" or "Production (Store)" channels. Release channel names are not case-sensitive. Defaults to ALPHA.'
     required: false
@@ -57,11 +56,12 @@ inputs:
   excludeAddons:
     description: 'Whether to exclude attaching global shared Add-ons to this build. Defaults to false.'
     required: false
-    default: 'false'
   draft:
     description: 'Uploads as a draft which can be later published on the Developer Dashboard. Defaults to false.'
     required: false
-    default: 'false'
+  force:
+    description: 'Forces the upload, even if there are validation errors. Defaults to false.'
+    required: false
 outputs:
   build_id:
     description: 'The ID of the build that was uploaded.'
