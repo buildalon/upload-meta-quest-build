@@ -52,6 +52,7 @@ steps:
 | `debugSymbolsPattern` | A pattern sequence that can match the filenames of all the debug symbol files. An asterisk may be used to indicate a wildcard, for example, `*.sym.so`. | false | |
 | `excludeAddons` | Whether to exclude attaching global shared Add-ons to this build. | false | |
 | `draft` | Specifies whether to upload the build as a draft. | false | |
+| `force` | Forces the upload, even if there are validation errors. | false | |
 
 ### outputs
 
