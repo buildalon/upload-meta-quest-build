@@ -32456,17 +32456,17 @@ const main = async () => {
             args.push(`--debug-symbols-pattern`, debugSymbolsPattern);
         }
         const inheritAssetFiles = core.getInput(`inheritAssetFiles`);
-        if (inheritAssetFiles && inheritAssetFiles === `true`) {
+        if (inheritAssetFiles) {
             core.debug(`inheritAssetFiles: ${inheritAssetFiles}`);
             args.push(`--inherit-asset-files`, inheritAssetFiles);
         }
         const excludeAddons = core.getInput(`excludeAddons`);
-        if (excludeAddons && excludeAddons === `true`) {
+        if (excludeAddons) {
             core.debug(`excludeAddons: ${excludeAddons}`);
             args.push(`--exclude-addons`, excludeAddons);
         }
         const draft = core.getInput(`draft`);
-        if (draft && draft === `true`) {
+        if (draft) {
             core.debug(`draft: ${draft}`);
             args.push(`--draft`, draft);
         }
