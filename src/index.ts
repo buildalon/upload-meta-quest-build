@@ -91,6 +91,22 @@ const main = async () => {
             core.debug(`debugSymbolsPattern: ${debugSymbolsPattern}`);
             args.push(`--debug-symbols-pattern`, debugSymbolsPattern);
         }
+        const inheritAssetFiles = core.getInput(`inheritAssetFiles`) || `false`;
+        if (inheritAssetFiles) {
+            core.debug(`inheritAssetFiles: ${inheritAssetFiles}`);
+            args.push(`--inherit-asset-files`, inheritAssetFiles);
+        }
+        const excludeAddons = core.getInput(`excludeAddons`) || `false`;
+        if (excludeAddons) {
+            core.debug(`excludeAddons: ${excludeAddons}`);
+            args.push(`--exclude-addons`, excludeAddons);
+        }
+        const draft = core.getInput(`draft`) || `false`;
+        if (draft) {
+            core.debug(`draft: ${draft}`);
+            args.push(`--draft`, draft);
+        }
+        args.push(`--disable-progress-bar`, `true`);
         const output = await execOvrUtil(args);
         const match = output.match(/Created Build ID: (?<build_id>\d+)/);
         if (match) {

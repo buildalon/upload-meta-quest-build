@@ -31,6 +31,10 @@ inputs:
   assetFilesConfig:
     description: 'Specifies the path to the file that configures required assets or associates DLC assets with in-app purchases.'
     required: false
+  inheritAssetFiles:
+    description: 'Specifies whether to inherit asset files from the previous build. Defaults to false.'
+    required: false
+    default: 'false'
   releaseChannel:
     description: 'Specifies the release channel for uploading the build. Use store for the "Production (AppLab)" or "Production (Store)" channels. Release channel names are not case-sensitive. Defaults to ALPHA.'
     required: false
@@ -50,6 +54,14 @@ inputs:
   debugSymbolsPattern:
     description: 'A pattern sequence that can match the filenames of all the debug symbol files. An asterisk may be used to indicate a wildcard, for example, *.sym.so.'
     required: false
+  excludeAddons:
+    description: 'Whether to exclude attaching global shared Add-ons to this build. Defaults to false.'
+    required: false
+    default: 'false'
+  draft:
+    description: 'Uploads as a draft which can be later published on the Developer Dashboard. Defaults to false.'
+    required: false
+    default: 'false'
 outputs:
   build_id:
     description: 'The ID of the build that was uploaded.'
