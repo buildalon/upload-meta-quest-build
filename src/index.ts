@@ -69,7 +69,7 @@ const main = async () => {
             core.debug(`languagePacksDir: ${languagePacksDir}`);
             args.push(`--language-packs-dir`, languagePacksDir);
         }
-        let debugSymbolsZip: string = null;
+        let debugSymbolsZip: string | null = null;
         const inputDebugSymbolsPath = core.getInput(`debugSymbolsZip`);
         if (inputDebugSymbolsPath) {
             debugSymbolsZip = await findSpecificPath(inputDebugSymbolsPath);
