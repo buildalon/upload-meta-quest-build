@@ -50,7 +50,7 @@ steps:
 | `debugSymbolsDir` | Path to the folder that contains the debug symbol file(s). | false | |
 | `debugSymbolsZip` | The path to the debug symbol zip file. If provided this will be used instead of the `debugSymbolsDir` and will unzip before uploading. | false | |
 | `debugSymbolsPattern` | A pattern sequence that can match the filenames of all the debug symbol files. An asterisk may be used to indicate a wildcard, for example, `*.sym.so`. | false | |
-| `excludeAddons` | Whether to exclude attaching global shared Add-ons to this build  | false | |
+| `excludeAddons` | Whether to exclude attaching global shared Add-ons to this build. | false | |
 | `draft` | Specifies whether to upload the build as a draft. | false | |
 
 ### outputs

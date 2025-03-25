@@ -91,18 +91,18 @@ const main = async () => {
             core.debug(`debugSymbolsPattern: ${debugSymbolsPattern}`);
             args.push(`--debug-symbols-pattern`, debugSymbolsPattern);
         }
-        const inheritAssetFiles = core.getInput(`inheritAssetFiles`) || `false`;
-        if (inheritAssetFiles === `true`) {
+        const inheritAssetFiles = core.getInput(`inheritAssetFiles`);
+        if (inheritAssetFiles && inheritAssetFiles === `true`) {
             core.debug(`inheritAssetFiles: ${inheritAssetFiles}`);
             args.push(`--inherit-asset-files`, inheritAssetFiles);
         }
-        const excludeAddons = core.getInput(`excludeAddons`) || `false`;
-        if (excludeAddons === `true`) {
+        const excludeAddons = core.getInput(`excludeAddons`);
+        if (excludeAddons && excludeAddons === `true`) {
             core.debug(`excludeAddons: ${excludeAddons}`);
             args.push(`--exclude-addons`, excludeAddons);
         }
-        const draft = core.getInput(`draft`) || `false`;
-        if (draft === `true`) {
+        const draft = core.getInput(`draft`);
+        if (draft && draft === `true`) {
             core.debug(`draft: ${draft}`);
             args.push(`--draft`, draft);
         }
