@@ -32470,6 +32470,11 @@ const main = async () => {
             core.debug(`draft: ${draft}`);
             args.push(`--draft`, draft);
         }
+        const force = core.getInput(`force`);
+        if (force === 'true') {
+            core.debug(`force: ${force}`);
+            args.push(`--force`);
+        }
         args.push(`--disable-progress-bar`, `true`);
         const output = await execOvrUtil(args);
         const match = output.match(/Created Build ID: (?<build_id>\d+)/);
