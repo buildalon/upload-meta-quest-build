@@ -1,6 +1,6 @@
 {
   "name": "upload-meta-quest-build",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A GitHub Action for uploading a Meta Quest app to the Meta Quest store.",
   "author": "buildalon",
   "repository": {
@@ -26,11 +26,11 @@
     "unzip-stream": "^0.3.4"
   },
   "devDependencies": {
-    "@types/node": "^22.13.13",
+    "@types/node": "^22.15.18",
     "@types/unzip-stream": "^0.3.4",
     "@vercel/ncc": "^0.34.0",
     "shx": "^0.3.4",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "build": "npm run clean && npm run bundle",

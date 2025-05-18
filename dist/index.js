@@ -32535,7 +32535,7 @@ async function findSpecificPath(pattern) {
     else if (paths.length > 1) {
         core.warning(`Found more than one path matching pattern: ${pattern}\n  > ${paths.join(`\n  > `)}`);
     }
-    const result = paths[0] !== null ? paths[0] : null;
+    const result = paths[0];
     core.debug(`Found path: ${result}`);
     return result;
 }
