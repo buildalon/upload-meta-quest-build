@@ -62,9 +62,9 @@ inputs:
   force:
     description: 'Forces the upload, even if there are validation errors. Defaults to false.'
     required: false
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
 outputs:
   build_id:
     description: 'The ID of the build that was uploaded.'
-runs:
-  using: 'node20'
-  main: 'dist/index.js'

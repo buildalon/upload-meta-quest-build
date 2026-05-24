@@ -57,3 +57,8 @@ steps:
 ### outputs
 
 * `build_id`: The uploaded build id.
+
+## Related actions
+
+* [setup-ovr-platform-util](https://github.com/buildalon/setup-ovr-platform-util)
+
