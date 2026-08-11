@@ -18,7 +18,7 @@ steps:
     # setup ovr platform util
   - uses: buildalon/setup-ovr-platform-util@v1
     # upload meta quest build
-  - uses: buildalon/upload-meta-quest-build@v1
+  - uses: buildalon/upload-meta-quest-build@v2
     id: upload
     with:
       appId: ${{ secrets.META_APP_ID }}
